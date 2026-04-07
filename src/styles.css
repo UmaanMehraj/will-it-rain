@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 13vh;
+    justify-content: center;
+    align-items : center;
+}
+
+.container{
+    color: white;
+    box-sizing: border-box;
+    padding: 1rem 25rem 1rem 25rem;
+    height: 80vh;
+    background: url(img/mojtaba-mohammadi-azbFk_fV9_U-unsplash.jpg);
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    justify-content: center;;
+}
+
+.form{
+    padding-bottom: 1rem;
+}
+.form > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form > label{
+    padding: 1.3rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+input{
+    height: 1.3rem;
+    width: 14rem;
+}
+
+#submitBtn{
+    height: 2rem;
+    width: 5rem;
+    transition: transform 0.4s ease;
+}
+
+#submitBtn:hover{
+    transform: scale(1.09);
+}
