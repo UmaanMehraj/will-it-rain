@@ -78,3 +78,6 @@ Future enhancements planned for this project:
 - Saved Locations — Let users bookmark favorite locations for quick access
 - Weather Alerts — Notify users of severe weather conditions
 - Dark Mode — Add a dark theme option for better readability
+
+
+Made during _The Odin Project_
