@@ -93,7 +93,7 @@ input {
 }
 
 .card-big,
-.card-small {
+.card-small-one, .card-small-two {
   box-sizing: border-box;
   border: 1.7px dashed rgba(255, 255, 255, 0.499);
   border-radius: 1rem;
@@ -124,9 +124,23 @@ input {
   font-size: 0.9rem;
 }
 
-.card-small {
+.card-small-one, .card-small-two {
+  display: grid;
+  grid-template-rows: 2fr repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: 11rem;
 }
+
+
+
+.icon-small{
+  grid-column: 1/-1;
+}
+
+.card-small-one > div , .card-small-two > div{
+  grid-column: 1/-1;
+}
+
 .footer {
   height: 7vh;
   color: white;

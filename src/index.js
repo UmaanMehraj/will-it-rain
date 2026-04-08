@@ -1,46 +1,67 @@
-import { getApi} from './api'
+import { getApi } from './api'
 import './styles.css'
-
 
 const form = document.querySelector('form')
 const address = document.querySelector('#address')
 
-form.addEventListener('submit', async (e)=>{
-    e.preventDefault()
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
 
-    const x  = await getApi(address.value)
-    console.log(x)
-    appendDiv(x)
-
+  const x = await getApi(address.value)
+  console.log(x)
+  appendDiv(x)
 })
 
 const cardBig = document.querySelector('.card-big')
+const smallCardOne = document.querySelector('.card-small-one')
+const smallCardTwo = document.querySelector('.card-small-two')
 
-function appendDiv(data){
-    cardBig.innerHTML = ''
-    const iconDiv = document.createElement('div')
-    iconDiv.setAttribute('class', 'icon-big')
+function appendDiv(data) {
+  cardBig.innerHTML = ''
+  smallCardOne.innerHTML = ''
+  smallCardTwo.innerHTML = ''
+  const iconDiv = document.createElement('div')
+  iconDiv.setAttribute('class', 'icon-big')
 
-    const cityDiv = document.createElement('div')
-    cityDiv.setAttribute('class', 'city-big')
-    cityDiv.innerText = data.location
+  const cityDiv = document.createElement('div')
+  cityDiv.setAttribute('class', 'city-big')
+  cityDiv.innerText = data.location
 
-    const tempDiv = document.createElement('div')
-    tempDiv.setAttribute('class', 'temp-big')
-    tempDiv.innerHTML = `Temperature: ${data.temp}&deg C`
+  const tempDiv = document.createElement('div')
+  tempDiv.setAttribute('class', 'temp-big')
+  tempDiv.innerHTML = `Temperature: ${data.temp}&deg C`
 
-    const descriptionDiv = document.createElement('div')
-    descriptionDiv.setAttribute('class', 'description')
-    descriptionDiv.innerText = data.description
+  const descriptionDiv = document.createElement('div')
+  descriptionDiv.setAttribute('class', 'description')
+  descriptionDiv.innerText = data.description
 
-    const conditionDiv = document.createElement('div')
-    conditionDiv.setAttribute('class', 'condition')
-    conditionDiv.innerText = data.condition
+  const conditionDiv = document.createElement('div')
+  conditionDiv.setAttribute('class', 'condition')
+  conditionDiv.innerText = data.condition
 
-    cardBig.append(iconDiv, cityDiv, tempDiv,conditionDiv,  descriptionDiv)
+  const iconOne = document.createElement('div')
+  iconOne.setAttribute('class', 'icon-small')
 
+  const tempOne = document.createElement('div')
+  tempOne.setAttribute('class', 'temp')
+  tempOne.innerHTML = `Temperature: ${data.nextDay[0]}&deg C`
 
+  const descOne = document.createElement('div')
+  descOne.setAttribute('class', 'descirption')
+  descOne.innerText = data.nextDay[1]
 
+  const iconTwo = document.createElement('div')
+  iconTwo.setAttribute('class', 'icon-small')
+
+  const tempTwo = document.createElement('div')
+  tempTwo.setAttribute('class', 'temp')
+  tempTwo.innerHTML = `Temperature: ${data.dayTwo[0]}&deg C`
+
+  const descTwo = document.createElement('div')
+  descTwo.setAttribute('class', 'descirption')
+  descTwo.innerText = data.dayTwo[1]
+
+  cardBig.append(iconDiv, cityDiv, tempDiv, conditionDiv, descriptionDiv)
+  smallCardOne.append(iconOne, tempOne, descOne)
+  smallCardTwo.append(iconTwo, tempTwo, descTwo)
 }
-
-
