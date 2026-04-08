@@ -8,7 +8,6 @@ A simple yet powerful weather application that provides real-time weather update
 - **Current Weather Display** — View real-time temperature, conditions, and detailed descriptions
 - **2-Day Forecast** — Plan ahead with a quick 2-day weather preview
 - **Weather Condition Icons** — Visual representations of weather conditions for quick scanning
-- **Responsive Design** — Works seamlessly on desktop and mobile browsers
 
 ## Quick Start
 
