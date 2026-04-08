@@ -41,7 +41,7 @@ npx webpack serve
 
 ## Project Structure
 
-will-it-rain/
+```
 ├── src/
 │   ├── index.js          # Main application entry point; handles form submission and DOM rendering
 │   ├── api.js            # Weather API integration; fetches and transforms data from Visual Crossing
@@ -53,6 +53,7 @@ will-it-rain/
 ├── webpack.config.js     # Webpack configuration for bundling and development server
 ├── package.json          # Project metadata and dependencies
 └── README.md             # This file
+```
 
 
 
