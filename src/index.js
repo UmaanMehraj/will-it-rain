@@ -6,6 +6,9 @@ const form = document.querySelector('form')
 const address = document.querySelector('#address')
 
 
+const x = await getApi('jammu')
+console.log(x)
+
 
 form.addEventListener('submit', async (e)=>{
     e.preventDefault()
