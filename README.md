@@ -16,7 +16,6 @@ A simple yet powerful weather application that provides real-time weather update
 
 - Node.js (v14 or higher)
 - npm or yarn
-- A modern web browser
 
 ### Installation & Setup
 
