@@ -56,8 +56,6 @@ npx webpack serve
 ```
 
 
-
-
 ## Features & Tech Stack
 ### Core Technologies
 - Frontend Framework — Vanilla JavaScript (no frameworks)
