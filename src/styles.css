@@ -60,6 +60,12 @@ input {
   height: 2rem;
   width: 5rem;
   border: 0;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.086);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.071);
   border-radius: 2rem;
   font-size: 1.01rem;
   transition: transform 0.4s ease;
@@ -95,9 +101,29 @@ input {
 }
 
 .card-big {
+  display: grid;
+  grid-template-rows: 2fr repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: 96%;
   grid-row: 1/-1;
 }
+.icon-big,
+.city-big,
+.temp-big,
+.description,
+.condition {
+  grid-column: 1/-1;
+}
+.city-big {
+  font-size: 1.3rem;
+}
+.card-big > .description {
+  font-size: 0.8rem;
+}
+.card-big > .condition {
+  font-size: 0.9rem;
+}
+
 .card-small {
   height: 11rem;
 }

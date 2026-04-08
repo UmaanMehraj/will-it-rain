@@ -1,7 +1,7 @@
 export async function getApi(location) {
   try {
     const data = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=BALW4ZQBY7CVNQT82HNFKPEVH`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=BALW4ZQBY7CVNQT82HNFKPEVH&unitGroup=metric`,
     )
     const weatherData = await data.json()
     // return await weatherData
