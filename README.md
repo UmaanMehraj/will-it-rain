@@ -22,11 +22,10 @@ A simple yet powerful weather application that provides real-time weather update
 
 1. Clone the repository:
 
-   ````bash
-   git clone https://github.com/yourusername/will-it-rain.git
-   cd will-it-rain```
-
-   ````
+ ````bash
+git clone https://github.com/yourusername/will-it-rain.git
+cd will-it-rain
+````
 
 2. Install Dependencies
 
