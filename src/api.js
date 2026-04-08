@@ -4,7 +4,6 @@ export async function getApi(location) {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=BALW4ZQBY7CVNQT82HNFKPEVH&unitGroup=metric`,
     )
     const weatherData = await data.json()
-    // return await weatherData
     return provideData(weatherData)
   } catch (err) {
     console.log(err)
@@ -22,13 +21,15 @@ export async function provideData(data) {
 
   const nextDayTemp = await data.days[1].temp
   const nextDayConditions = await data.days[1].conditions
+  const nextDayDate = await data.days[1].datetime
 
-  nextDay.push(nextDayTemp, nextDayConditions)
+  nextDay.push(nextDayTemp, nextDayConditions, nextDayDate)
 
   const dayTwoTemp = await data.days[2].temp
   const dayTwoConditions = await data.days[2].conditions
+  const dayTwoDate = await data.days[2].datetime
 
-  dayTwo.push(dayTwoTemp, dayTwoConditions)
+  dayTwo.push(dayTwoTemp, dayTwoConditions, dayTwoDate)
 
 
 

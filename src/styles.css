@@ -98,6 +98,7 @@ input {
   border: 1.7px dashed rgba(255, 255, 255, 0.499);
   border-radius: 1rem;
   padding-left: 0.5rem;
+  justify-content: center;
 }
 
 .card-big {
@@ -129,6 +130,17 @@ input {
   grid-template-rows: 2fr repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   height: 11rem;
+}
+
+.icon-big, .icon-small{
+  display: flex;
+  justify-content: right;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+.icon-big >img{
+  height: 7rem;
+
 }
 
 
